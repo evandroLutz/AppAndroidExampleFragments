@@ -1,4 +1,4 @@
-package com.example.entrega3.entity;
+package com.example.entrega3.model;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;

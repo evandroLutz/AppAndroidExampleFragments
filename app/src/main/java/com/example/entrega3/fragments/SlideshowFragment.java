@@ -1,4 +1,4 @@
-package com.example.entrega3.ui.slideshow;
+package com.example.entrega3.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -12,8 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.entrega3.R;
 import com.example.entrega3.databinding.FragmentSlideshowBinding;
+import com.example.entrega3.model.SlideshowViewModel;
 
 public class SlideshowFragment extends Fragment {
 

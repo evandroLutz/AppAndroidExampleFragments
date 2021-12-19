@@ -1,4 +1,4 @@
-package com.example.entrega3.ui.cadastra;
+package com.example.entrega3.fragments;
 
 import android.os.Bundle;
 

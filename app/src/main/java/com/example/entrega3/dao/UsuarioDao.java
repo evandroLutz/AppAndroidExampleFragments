@@ -8,7 +8,7 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
-import com.example.entrega3.entity.Usuario;
+import com.example.entrega3.model.Usuario;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.example.entrega3.ui.gallery;
+package com.example.entrega3.model;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;

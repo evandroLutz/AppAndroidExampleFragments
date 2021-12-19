@@ -1,19 +1,16 @@
-package com.example.entrega3.ui.home;
+package com.example.entrega3.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.example.entrega3.R;
 import com.example.entrega3.databinding.FragmentHomeBinding;
+import com.example.entrega3.model.HomeViewModel;
 
 public class HomeFragment extends Fragment {
 
