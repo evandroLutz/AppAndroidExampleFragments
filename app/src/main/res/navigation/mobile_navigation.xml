@@ -15,7 +15,11 @@
         android:id="@+id/nav_cadastrar"
         android:name="com.example.entrega3.ui.cadastra.CadastraFragment"
         android:label="@string/menu_cadastrar"
-        tools:layout="@layout/fragment_cadastra" />
+        tools:layout="@layout/fragment_cadastra" >
+        <action
+            android:id="@+id/action_nav_cadastrar_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
 
 
     <fragment

@@ -32,13 +32,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.appBarMain.toolbar);
-        binding.appBarMain.fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
@@ -77,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 builder.setMessage("Evandro Lutz Guimarães - PW3")
                         .setNegativeButton("Fechar", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
-                                //
+                                Snackbar.make(findViewById(R.id.nav_home), "Você fechou a Dialog", Snackbar.LENGTH_LONG).show();
                             }
                         });
                 builder.create().show();
