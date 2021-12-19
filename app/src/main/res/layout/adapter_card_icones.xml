@@ -5,56 +5,169 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
+    android:background="@color/laurel_green"
     app:cardElevation="4dp">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/polished_pine">
 
-    <androidx.appcompat.widget.LinearLayoutCompat
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/enderecoIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/firstExibeLeft"
+            android:layout_marginLeft="@dimen/firstExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopThree"
+            android:background="@color/polished_pine"
+            app:srcCompat="@drawable/adress_icon" />
+
+        <ImageView
+            android:id="@+id/userIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/firstExibeLeft"
+            android:layout_marginLeft="@dimen/firstExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopTwo"
+            android:background="@color/polished_pine"
+            app:srcCompat="@drawable/user_icon" />
 
         <TextView
-            android:id="@+id/textViewNome"
-            android:layout_width="match_parent"
+            android:id="@+id/id"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/twoExibeLeft"
+            android:layout_marginLeft="@dimen/twoExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            android:text="TextView" />
 
         <TextView
-            android:id="@+id/textViewDtNasc"
-            android:layout_width="match_parent"
+            android:id="@+id/nome"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Data de Nascimento" />
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/twoExibeLeft"
+            android:layout_marginLeft="@dimen/twoExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopTwo"
+            android:text="TextView" />
 
         <TextView
-            android:id="@+id/textViewEndereco"
-            android:layout_width="match_parent"
+            android:id="@+id/endereco"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Endereço" />
-    </androidx.appcompat.widget.LinearLayoutCompat>
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/twoExibeLeft"
+            android:layout_marginLeft="@dimen/twoExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopThree"
+            android:text="TextView" />
+
+        <TextView
+            android:id="@+id/data"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/fourExibeLeft"
+            android:layout_marginLeft="@dimen/fourExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            android:text="TextView" />
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/btnExcluir"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/genero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/fourExibeLeft"
+            android:layout_marginLeft="@dimen/fourExibeLeft"
+            android:layout_marginTop="91dp"
+            android:text="TextView" />
 
-            <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/btnEditar"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </androidx.appcompat.widget.LinearLayoutCompat>
+        <Button
+            android:id="@+id/excluir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="166dp"
+            android:text="@string/excluir"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/kombu_green" />
+
+        <Button
+            android:id="@+id/edita"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="118dp"
+            android:layout_marginLeft="118dp"
+            android:layout_marginTop="166dp"
+            android:text="@string/editar"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/kombu_green" />
+
+        <ImageView
+            android:id="@+id/calendarIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/threeExibeLeft"
+            android:layout_marginLeft="@dimen/threeExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            android:background="@color/polished_pine"
+            app:srcCompat="@drawable/calendar_icon" />
+
+        <ImageView
+            android:id="@+id/genreIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/threeExibeLeft"
+            android:layout_marginLeft="@dimen/threeExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopTwo"
+            android:background="@color/polished_pine"
+            app:srcCompat="@drawable/genre_icon" />
+
+        <TextView
+            android:id="@+id/idLabel"
+            android:layout_width="23dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/firstExibeLeft"
+            android:layout_marginLeft="@dimen/firstExibeLeft"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            android:background="@color/polished_pine"
+            android:text="@string/Id"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

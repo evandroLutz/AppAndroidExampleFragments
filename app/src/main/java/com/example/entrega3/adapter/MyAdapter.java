@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -44,9 +45,11 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
         //exibe os itens no Recycler
         Usuario u = listaUsuarios.get(position);
+        myViewHolder.id.setText(String.valueOf(u.getId()));
         myViewHolder.nome.setText(u.getNome());
-        myViewHolder.dataNascimento.setText(u.getDataNasc());
         myViewHolder.endereco.setText(u.getEndereco());
+        myViewHolder.dataNascimento.setText(u.getDataNasc());
+        myViewHolder.genero.setText(u.getGenero());
         myViewHolder.btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,22 +83,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         //dados da pessoa que serão exibidos no recycler
+        TextView id;
         TextView nome;
-        TextView dataNascimento;
         TextView endereco;
-        ImageButton btnDelete;
-        ImageButton btnEdit;
+        TextView dataNascimento;
+        TextView genero;
+        Button btnDelete;
+        Button btnEdit;
         //se usar adapter_card -> ajustar o ViewHolder para usar Button
         //Button btnDelete;
         //Button btnEdit;
         public MyViewHolder(View itemView){
             super(itemView);
             //passa uma referência para os componentes que estão na interface
-            nome = itemView.findViewById(R.id.textViewNome);
-            dataNascimento = itemView.findViewById(R.id.textViewDtNasc);
-            endereco = itemView.findViewById(R.id.textViewEndereco);
-            btnDelete = itemView.findViewById(R.id.btnExcluir);
-            btnEdit= itemView.findViewById(R.id.btnEditar);
+            id = itemView.findViewById(R.id.id);
+            nome = itemView.findViewById(R.id.nome);
+            endereco = itemView.findViewById(R.id.endereco);
+            dataNascimento = itemView.findViewById(R.id.data);
+            genero = itemView.findViewById(R.id.genero);
+            btnDelete = itemView.findViewById(R.id.excluir);
+            btnEdit= itemView.findViewById(R.id.edita);
         }
     }
 }
