@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.cadastra.CadastraFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ming"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="@dimen/linearImg"
+            android:layout_marginLeft="@dimen/linearImg"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            app:srcCompat="@drawable/users_icon" />
+
+        <TextView
+            android:id="@+id/nomeUsuario"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/nomeUsuario" />
+
+        <EditText
+            android:id="@+id/editTextnomeUsuario"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/enderecoUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/enderecoUsuario" />
+
+        <EditText
+            android:id="@+id/editTextEnderecoUsuario"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/dataNascUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/dataNascUsuario" />
+
+        <EditText
+            android:id="@+id/editTextdataNascUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="date"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/generoUsuario"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/Gênero" />
+
+        <Spinner
+            android:id="@+id/spinnerGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:entries="@array/itensSpinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.039" />
+
+        <Button
+            android:id="@+id/btnCadUsuario"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/linearContent"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:layout_marginTop="@dimen/linearContent"
+            android:layout_marginEnd="@dimen/linearContent"
+            android:layout_marginRight="@dimen/linearContent"
+            android:layout_marginBottom="@dimen/linearContent"
+            android:background="@color/laurel_green"
+            android:text="@string/btnCadUsuario"
+            android:textColor="@color/laurel_green"
+            app:backgroundTint="@color/kombu_green" />
+
+    </LinearLayout>
+
+</FrameLayout>

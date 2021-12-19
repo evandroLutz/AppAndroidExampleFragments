@@ -12,6 +12,13 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/nav_cadastrar"
+        android:name="com.example.entrega3.ui.cadastra.CadastraFragment"
+        android:label="@string/menu_cadastrar"
+        tools:layout="@layout/fragment_cadastra" />
+
+
+    <fragment
         android:id="@+id/nav_gallery"
         android:name="com.example.entrega3.ui.gallery.GalleryFragment"
         android:label="@string/menu_gallery"

@@ -15,4 +15,35 @@
     <string name="menu_sobre">Sobre</string>
     <string name="menu_slideshow">Slideshow</string>
     <string name="menu_email">evandrolutz@outlook.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nomeUsuario">Nome</string>
+    <string name="enderecoUsuario">Endereço</string>
+    <string name="dataNascUsuario">Data de nascimento</string>
+    <string name="btnCadUsuario">Cadastrar usuário</string>
+    <string name="btnEditarUsuario">Editar usuário</string>
+    <string name="tituloExemplar">Titulo:</string>
+    <string name="autorExemplar">Autor:</string>
+    <string name="assuntoExemplar">Assunto:</string>
+    <string name="btnCadExemplar">Cadastrar exemplar</string>
+    <string name="btnEditarExemplar">Editar exemplar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="editar">Editar</string>
+    <string name="excluir">Excluir</string>
+    <string name="voltar">Voltar</string>
+    <string name="Gênero">Gênero</string>
+    <string name="Id">id:</string>
+    <string name="vazio">Não há itens cadastrados.</string>
+    <string name="emprestimo">id usuario empres.</string>
+    <string name="exibindo">Exibindo:</string>
+    <string name="escolhaExemplar">Escolha um exemplar para associar a um usuário:</string>
+    <string name="associar">Associar a usuário:</string>
+    <string name="associarExemplarUsuario">Associar o exemplar</string>
+    <string name="pesquisaExemplar">Buscar Título na Web</string>
+    <string name="lido">Lido</string>
+    <string-array name="itensSpinner">
+        <item>Feminino</item>
+        <item>Masculino</item>
+        <item>Outros/Não informado</item>
+    </string-array>
 </resources>

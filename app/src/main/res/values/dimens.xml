@@ -5,4 +5,19 @@
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">176dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="linearImg">75dp</dimen>
+    <dimen name="ferramentaHeight">70dp</dimen>
+    <dimen name="linearContent">29dp</dimen>
+    <dimen name="ItemExibeTopOne">60dp</dimen>
+    <dimen name="ItemExibeTopTwo">90dp</dimen>
+    <dimen name="ItemExibeTopThree">120dp</dimen>
+    <dimen name="ItemExibeTopFour">150dp</dimen>
+    <dimen name="ItemExibeTopSix">180dp</dimen>
+    <dimen name="ItemExibeTopSeven">230dp</dimen>
+    <dimen name="firstExibeLeft">9dp</dimen>
+    <dimen name="twoExibeLeftBigger">80dp</dimen>
+    <dimen name="twoExibeLeft">55dp</dimen>
+    <dimen name="threeExibeLeft">220dp</dimen>
+    <dimen name="fourExibeLeft">260dp</dimen>
+    <dimen name="fiveExibeLeft">300dp</dimen>
 </resources>
