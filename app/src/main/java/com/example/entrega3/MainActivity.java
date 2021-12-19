@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
-                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.MyDialogTheme);
                 builder.setTitle("Aluno:");
                 builder.setIcon(R.drawable.ifrs_logo);
                 builder.setMessage("Evandro Lutz Guimarães - PW3")

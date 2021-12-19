@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/ifrs_logo"
         android:orderInCategory="100"
         android:title="@string/menu_sobre"
         app:showAsAction="never" />
