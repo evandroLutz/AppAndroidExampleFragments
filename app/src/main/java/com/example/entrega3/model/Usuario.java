@@ -12,9 +12,10 @@ public class Usuario {
 
     public Usuario(){}
 
-    public Usuario(int id, String nome, String dataNasc, String genero) {
+    public Usuario(int id, String nome, String endereco, String dataNasc, String genero) {
         this.id =  id;
         this.nome = nome;
+        this.endereco = endereco;
         this.dataNasc = dataNasc;
         this.genero = genero;
     }
@@ -61,7 +62,7 @@ public class Usuario {
 
     public static List<Usuario> inicializaLista(){
         List<Usuario> usuarios = new ArrayList<>();
-        usuarios.add(new Usuario(1, "Evandro Lutz Guimarães", "20/12/2000", "Rua x, 10"));
+        usuarios.add(new Usuario(1, "Evandro Lutz Guimarães","rua Dom Diogo de Souza", "29/03/1991", "Masculino"));
 
         return usuarios;
     }
