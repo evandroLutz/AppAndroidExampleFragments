@@ -21,6 +21,13 @@
             app:destination="@id/nav_home" />
     </fragment>
 
+    <fragment
+        android:id="@+id/nav_listar"
+        android:name="com.example.entrega3.fragments.ListarUsuariosFragment"
+        android:label="@string/menu_listar"
+        tools:layout="@layout/fragment_listar_usuarios" >
+    </fragment>
+
 
     <fragment
         android:id="@+id/nav_gallery"

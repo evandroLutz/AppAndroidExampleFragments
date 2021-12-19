@@ -1,13 +1,9 @@
 package com.example.entrega3.model;
 
-import androidx.room.Entity;
-import androidx.room.PrimaryKey;
+import java.util.ArrayList;
+import java.util.List;
 
-import java.io.Serializable;
-
-@Entity
-public class Usuario implements Serializable {
-    @PrimaryKey(autoGenerate = true)
+public class Usuario {
     private int id;
     private String nome;
     private String endereco;
@@ -15,6 +11,13 @@ public class Usuario implements Serializable {
     private String genero;
 
     public Usuario(){}
+
+    public Usuario(int id, String nome, String dataNasc, String genero) {
+        this.id =  id;
+        this.nome = nome;
+        this.dataNasc = dataNasc;
+        this.genero = genero;
+    }
 
     public String getNome() {
         return nome;
@@ -54,6 +57,13 @@ public class Usuario implements Serializable {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public static List<Usuario> inicializaLista(){
+        List<Usuario> usuarios = new ArrayList<>();
+        usuarios.add(new Usuario(1, "Evandro Lutz Guimarães", "20/12/2000", "Rua x, 10"));
+
+        return usuarios;
     }
 
 
