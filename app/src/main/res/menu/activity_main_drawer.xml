@@ -20,9 +20,5 @@
             android:id="@+id/nav_editar"
             android:icon="@drawable/ferramenta_icon"
             android:title="@string/menu_editar_excluir" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
     </group>
 </menu>
