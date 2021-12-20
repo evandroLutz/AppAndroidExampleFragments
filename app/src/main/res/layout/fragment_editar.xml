@@ -1,71 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.appcompat.widget.LinearLayoutCompat  xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layoutLogin"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_margin="@dimen/linearContent">
+    tools:context=".fragments.CadastraFragment">
 
+    <!-- TODO: Update blank fragment layout -->
 
-    <com.google.android.material.textfield.TextInputLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutNome"
-        app:counterEnabled="true"
-        app:counterMaxLength="60"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        app:boxBackgroundColor="@null"
-        >
-        <com.google.android.material.textfield.TextInputEditText
+        android:layout_height="match_parent"
+        android:background="@color/ming"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="@dimen/linearImg"
+            android:layout_marginLeft="@dimen/linearImg"
+            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            app:srcCompat="@drawable/users_icon" />
+
+        <TextView
+            android:id="@+id/nomeUsuario"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/nomeUsuario"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editTextnomeUsuario"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="#000000" />
+
+        <TextView
+            android:id="@+id/enderecoUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/enderecoUsuario"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/editTextEnderecoUsuario"
+            android:layout_width="341dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/dataNascUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/dataNascUsuario"
+            android:textColor="#FF000000" />
+
+        <EditText
+            android:id="@+id/editTextdataNascUsuario"
+            android:layout_width="342dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:ems="10"
+            android:inputType="date"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/generoUsuario"
+            android:layout_width="344dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:text="@string/Gênero"
+            android:textColor="#FF000000" />
+
+        <Spinner
+            android:id="@+id/spinnerGenero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtNome"
-            android:hint="@string/nomeUsuario"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:background="@color/ming"
+            android:entries="@array/itensSpinner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.039" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutData"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:maxLength="10"
-        app:boxBackgroundColor="@null"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnCadUsuario"
+            android:layout_width="225dp"
             android:layout_height="wrap_content"
-            android:id="@+id/txtDtNasc"
-            android:hint="@string/dataNascUsuario"
-            android:inputType="text|date" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/layoutEndereco"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:maxLength="100"
-        app:boxBackgroundColor="@null"
-        >
+            android:layout_margin="@dimen/linearContent"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:layout_marginTop="@dimen/linearContent"
+            android:layout_marginEnd="@dimen/linearContent"
+            android:layout_marginRight="@dimen/linearContent"
+            android:layout_marginBottom="@dimen/linearContent"
+            android:background="@color/laurel_green"
+            android:text="@string/btnCadUsuario"
+            android:textColor="@color/white"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            app:backgroundTint="@color/polished_pine" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/txtEnd"
-            android:hint="@string/enderecoUsuario"
-            android:inputType="textPersonName" />
-    </com.google.android.material.textfield.TextInputLayout>
-    <Button
-        android:id="@+id/btnEditar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/editar"
-      />
+    </LinearLayout>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</FrameLayout>
