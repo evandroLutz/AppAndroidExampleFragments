@@ -6,6 +6,18 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
+        android:id="@+id/nav_editar"
+        android:name="com.example.entrega3.fragments.EditarFragment"
+        android:label="Editar"
+        tools:layout="@layout/fragment_editar">
+        <action
+            android:id="@+id/action_nav_editarFragment_to_nav_listarFragment"
+            app:destination="@id/nav_listar" />
+        <action
+            android:id="@+id/action_nav_editarFragment_to_nav_listar"
+            app:destination="@id/nav_listar" />
+    </fragment>
+    <fragment
         android:id="@+id/nav_home"
         android:name="com.example.entrega3.fragments.HomeFragment"
         android:label="@string/menu_home"

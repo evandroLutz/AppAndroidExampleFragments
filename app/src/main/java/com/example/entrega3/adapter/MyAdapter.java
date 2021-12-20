@@ -60,7 +60,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         bundle.putString("NOME", listaUsuarios.get(position).getNome());
         bundle.putString("END", listaUsuarios.get(position).getEndereco());
         bundle.putString("DTNASC", listaUsuarios.get(position).getDataNasc());
-//        myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editarFragment, bundle));
+        myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editar, bundle));
     }
 
     @Override
