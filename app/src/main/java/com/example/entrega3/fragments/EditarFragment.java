@@ -6,7 +6,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
@@ -18,7 +17,6 @@ import android.widget.Button;
 
 import com.example.entrega3.R;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.android.material.textfield.TextInputEditText;
 
 public class EditarFragment extends Fragment {
     private AppCompatEditText txtNome;

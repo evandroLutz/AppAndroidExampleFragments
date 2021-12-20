@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -35,15 +34,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemList = LayoutInflater.from(viewGroup.getContext()).
                 inflate(R.layout.adapter_card_icones, viewGroup, false);
-        //se usar adapter_card -> ajustar o ViewHolder para usar Button
-        //retorna o itemList que é passado para o construtor da MyViewHolder
         this.context = viewGroup.getContext();
         return new MyViewHolder(itemList);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
-        //exibe os itens no Recycler
         Usuario u = listaUsuarios.get(position);
         myViewHolder.id.setText(String.valueOf(u.getId()));
         myViewHolder.nome.setText(u.getNome());
@@ -70,8 +66,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
     public void removerItem(final int position) {
         new AlertDialog.Builder(context)
-                .setTitle("Deletando pessoa")
-                .setMessage("Tem certeza que deseja deletar essa pessoa?")
+                .setTitle("o usuário será deletado")
+                .setMessage("Tem certeza que deseja proceder?")
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
@@ -82,7 +78,6 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-        //dados da pessoa que serão exibidos no recycler
         TextView id;
         TextView nome;
         TextView endereco;
@@ -90,12 +85,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         TextView genero;
         Button btnDelete;
         Button btnEdit;
-        //se usar adapter_card -> ajustar o ViewHolder para usar Button
-        //Button btnDelete;
-        //Button btnEdit;
         public MyViewHolder(View itemView){
             super(itemView);
-            //passa uma referência para os componentes que estão na interface
             id = itemView.findViewById(R.id.id);
             nome = itemView.findViewById(R.id.nome);
             endereco = itemView.findViewById(R.id.endereco);

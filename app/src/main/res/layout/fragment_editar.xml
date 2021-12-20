@@ -116,7 +116,7 @@
             android:layout_marginRight="@dimen/linearContent"
             android:layout_marginBottom="@dimen/linearContent"
             android:background="@color/laurel_green"
-            android:text="@string/btnCadUsuario"
+            android:text="@string/btnEditarUsuario"
             android:textColor="@color/white"
             android:textColorHighlight="#000000"
             android:textColorLink="#000000"
