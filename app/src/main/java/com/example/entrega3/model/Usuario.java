@@ -63,6 +63,9 @@ public class Usuario {
     public static List<Usuario> inicializaLista(){
         List<Usuario> usuarios = new ArrayList<>();
         usuarios.add(new Usuario(1, "Evandro Lutz Guimarães","rua Dom Diogo de Souza", "29/03/1991", "Masculino"));
+        usuarios.add(new Usuario(2, "Jorge Luis de Oliveira","rua Beija Flor", "12/10/1964", "Masculino"));
+        usuarios.add(new Usuario(3, "Delci Lutz Guimarães","rua Beija Flor", "06/01/1963", "Feminino"));
+        usuarios.add(new Usuario(4, "Mikaela da Silva Machado","rua Dom Diogo de Souza", "26/12/1994", "Feminino"));
 
         return usuarios;
     }
