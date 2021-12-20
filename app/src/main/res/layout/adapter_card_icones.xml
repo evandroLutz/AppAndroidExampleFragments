@@ -111,8 +111,8 @@
             android:layout_marginLeft="12dp"
             android:layout_marginTop="166dp"
             android:text="@string/excluir"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/kombu_green" />
+            android:textColor="@color/polished_pine"
+            app:backgroundTint="@color/ming" />
 
         <Button
             android:id="@+id/edita"
@@ -125,8 +125,8 @@
             android:layout_marginLeft="118dp"
             android:layout_marginTop="166dp"
             android:text="@string/editar"
-            android:textColor="@color/white"
-            app:backgroundTint="@color/kombu_green" />
+            android:textColor="@color/polished_pine"
+            app:backgroundTint="@color/ming" />
 
         <ImageView
             android:id="@+id/calendarIcon"

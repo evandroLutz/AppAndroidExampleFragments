@@ -29,7 +29,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
-            android:text="@string/nomeUsuario" />
+            android:text="@string/nomeUsuario"
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/editTextnomeUsuario"
@@ -39,7 +40,9 @@
             android:layout_marginLeft="@dimen/linearContent"
             android:ems="10"
             android:inputType="textPersonName"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textColorHighlight="@color/black"
+            android:textColorLink="#000000" />
 
         <TextView
             android:id="@+id/enderecoUsuario"
@@ -47,7 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
-            android:text="@string/enderecoUsuario" />
+            android:text="@string/enderecoUsuario"
+            android:textColor="#000000" />
 
         <EditText
             android:id="@+id/editTextEnderecoUsuario"
@@ -65,7 +69,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
-            android:text="@string/dataNascUsuario" />
+            android:text="@string/dataNascUsuario"
+            android:textColor="#FF000000" />
 
         <EditText
             android:id="@+id/editTextdataNascUsuario"
@@ -83,7 +88,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
-            android:text="@string/Gênero" />
+            android:text="@string/Gênero"
+            android:textColor="#FF000000" />
 
         <Spinner
             android:id="@+id/spinnerGenero"
@@ -91,6 +97,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
+            android:background="@color/ming"
             android:entries="@array/itensSpinner"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView2"
@@ -110,8 +117,10 @@
             android:layout_marginBottom="@dimen/linearContent"
             android:background="@color/laurel_green"
             android:text="@string/btnCadUsuario"
-            android:textColor="@color/laurel_green"
-            app:backgroundTint="@color/kombu_green" />
+            android:textColor="@color/white"
+            android:textColorHighlight="#000000"
+            android:textColorLink="#000000"
+            app:backgroundTint="@color/polished_pine" />
 
     </LinearLayout>
 
