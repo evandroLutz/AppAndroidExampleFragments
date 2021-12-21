@@ -25,9 +25,9 @@ public class EditarFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_cadastra, container, false);
+        View root = inflater.inflate(R.layout.fragment_editar, container, false);
         txtNome = root.findViewById(R.id.editTextnomeUsuario);
-        btnEditar = root.findViewById(R.id.btnCadUsuario);
+        btnEditar = root.findViewById(R.id.btnEditarUsuario);
         btnEditar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
