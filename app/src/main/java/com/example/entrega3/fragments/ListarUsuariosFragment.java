@@ -20,7 +20,8 @@ public class ListarUsuariosFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_listar_usuarios, container, false);
         RecyclerView recyclerView = root.findViewById(R.id.recyclerView);
 
-        MyAdapter myAdapter = new MyAdapter(Usuario.inicializaLista());
+        Usuario.getUsuarios();
+        MyAdapter myAdapter = new MyAdapter( Usuario.getUsuarios());
         recyclerView.setAdapter(myAdapter);
         recyclerView.setHasFixedSize(true);
 

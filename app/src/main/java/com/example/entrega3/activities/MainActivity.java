@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.entrega3.R;
+import com.example.entrega3.model.Usuario;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -19,6 +20,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.entrega3.databinding.ActivityMainBinding;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 

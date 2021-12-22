@@ -53,9 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
         Bundle bundle = new Bundle();
-        bundle.putString("NOME", listaUsuarios.get(position).getNome());
-        bundle.putString("END", listaUsuarios.get(position).getEndereco());
-        bundle.putString("DTNASC", listaUsuarios.get(position).getDataNasc());
+        bundle.putString("id", String.valueOf(listaUsuarios.get(position).getId()));
         myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editar, bundle));
     }
 
