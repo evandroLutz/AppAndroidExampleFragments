@@ -20,11 +20,14 @@ import android.widget.Spinner;
 import com.example.entrega3.R;
 import com.example.entrega3.model.Usuario;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
 
 public class EditarFragment extends Fragment {
-    private EditText nome, endereco,dataNasc;
+    private TextInputEditText nome, endereco,dataNasc;
+    private TextInputLayout nomeLayout, enderecoLayout, dataNascLayout;
     private Spinner genero;
     private Button btnEditar;
     private int idRecebido;
@@ -38,6 +41,9 @@ public class EditarFragment extends Fragment {
         nome = root.findViewById(R.id.editTextnomeUsuario);
         endereco =  root.findViewById((R.id.editTextEnderecoUsuario));
         dataNasc =  root.findViewById(R.id.editTextdataNascUsuario);
+        nomeLayout = root.findViewById(R.id.nomeUsuario);
+        enderecoLayout =  root.findViewById((R.id.enderecoUsuario));
+        dataNascLayout =  root.findViewById(R.id.dataNascUsuario);
         genero = root.findViewById(R.id.spinnerGenero);
         btnEditar = root.findViewById(R.id.btnEditarUsuario);
         btnEditar.setOnClickListener(new View.OnClickListener() {
@@ -58,14 +64,32 @@ public class EditarFragment extends Fragment {
                         List<Usuario> usuarios = Usuario.getUsuarios();
                         for (Usuario usuario : usuarios) {
                             if (usuario.getId() == idRecebido) {
-                                usuario.setNome(nome.getText().toString());
-                                usuario.setEndereco(endereco.getText().toString());
+
+                                if(!nome.getText().toString().isEmpty()){
+
+                                    usuario.setNome(nome.getText().toString());
+
+                                }
+
+                                if(!endereco.getText().toString().isEmpty()){
+
+                                    usuario.setEndereco(endereco.getText().toString());
+
+                                }
+
+                                if(!dataNasc.getText().toString().isEmpty()){
+
+                                    usuario.setDataNasc(dataNasc.getText().toString());
+
+                                }
                                 usuario.setGenero(genero.getSelectedItem().toString());
-                                usuario.setDataNasc(dataNasc.getText().toString());
+                                Snackbar.make(getView(), "O usuário foi editado!!!", Snackbar.LENGTH_LONG).show();
+                                Navigation.findNavController(getView()).navigate(R.id.action_nav_editarFragment_to_nav_listarFragment);
+
                             }
+
                         }
-                        Snackbar.make(getView(), "O usuário foi editado!!!", Snackbar.LENGTH_LONG).show();
-                        Navigation.findNavController(getView()).navigate(R.id.action_nav_editarFragment_to_nav_listarFragment);
+
                     }
                 }).setNegativeButton("Não", null).show();
 
