@@ -18,8 +18,8 @@ public interface UsuarioDao {
     @Query("SELECT * FROM Usuario")
     public List<Usuario> getAllUsuarios();
 
-    @Query("SELECT * FROM Usuario WHERE nome =:name")
-    public  List<Usuario> getUsuarioByName(String name);
+    @Query("SELECT * FROM Usuario WHERE id =:id")
+    public  Usuario getUsuarioById(int id);
 
     @Insert(onConflict = REPLACE)
     public void insert(Usuario usuario);

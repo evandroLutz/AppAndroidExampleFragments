@@ -67,30 +67,29 @@ public class EditarFragment extends Fragment {
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        Usuario usuario = new Usuario();
-                        if(!nome.getText().toString().isEmpty()){
-
-                                    usuario.setNome(nome.getText().toString());
-
-                                }
-
-                                if(!endereco.getText().toString().isEmpty()){
-
-                                    usuario.setEndereco(endereco.getText().toString());
-
-                                }
-
-                                if(!dataNasc.getText().toString().isEmpty()){
-
-                                    usuario.setDataNasc(dataNasc.getText().toString());
-
-                                }
-                                usuario.setGenero(genero.getSelectedItem().toString());
-                                usuario.setId(idRecebido);
                                 AsyncTask<Void, Void, Void> execute = new AsyncTask<Void, Void, Void>() {
                                     @Override
                                     protected Void doInBackground(Void... voids) {
                                         UsuarioDao usuarioDao = AppDatabase.getInstance(getActivity().getApplicationContext()).createUsuarioDAO();
+                                        Usuario usuario = usuarioDao.getUsuarioById(idRecebido);
+                                        if(!nome.getText().toString().isEmpty()){
+
+                                            usuario.setNome(nome.getText().toString());
+
+                                        }
+
+                                        if(!endereco.getText().toString().isEmpty()){
+
+                                            usuario.setEndereco(endereco.getText().toString());
+
+                                        }
+
+                                        if(!dataNasc.getText().toString().isEmpty()){
+
+                                            usuario.setDataNasc(dataNasc.getText().toString());
+
+                                        }
+                                        usuario.setGenero(genero.getSelectedItem().toString());
                                         usuarioDao.update(usuario);
                                         return null;
                                     }
