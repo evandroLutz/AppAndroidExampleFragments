@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 import com.example.entrega3.model.Usuario;
 
-@Database(entities = {Usuario.class}, version = 1)
+@Database(entities = {Usuario.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase appDatabase;

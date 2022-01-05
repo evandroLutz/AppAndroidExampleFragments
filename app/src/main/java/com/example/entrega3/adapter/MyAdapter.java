@@ -57,7 +57,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
             }
         });
         Bundle bundle = new Bundle();
-        bundle.putString("id", String.valueOf(position));
+        bundle.putInt("id", u.getId());
+        System.out.println("position view"+ position);
         myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editar, bundle));
     }
 
