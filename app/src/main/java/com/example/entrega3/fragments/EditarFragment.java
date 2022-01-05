@@ -1,6 +1,8 @@
 package com.example.entrega3.fragments;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -16,8 +18,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.entrega3.R;
+import com.example.entrega3.activities.MainActivity;
+import com.example.entrega3.dao.AppDatabase;
+import com.example.entrega3.dao.UsuarioDao;
 import com.example.entrega3.model.Usuario;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
@@ -61,11 +67,8 @@ public class EditarFragment extends Fragment {
                 .setPositiveButton("Sim", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        List<Usuario> usuarios = Usuario.getUsuarios();
-                        for (Usuario usuario : usuarios) {
-                            if (usuario.getId() == idRecebido) {
-
-                                if(!nome.getText().toString().isEmpty()){
+                        Usuario usuario = new Usuario();
+                        if(!nome.getText().toString().isEmpty()){
 
                                     usuario.setNome(nome.getText().toString());
 
@@ -83,15 +86,37 @@ public class EditarFragment extends Fragment {
 
                                 }
                                 usuario.setGenero(genero.getSelectedItem().toString());
-                                Snackbar.make(getView(), "O usuário foi editado!!!", Snackbar.LENGTH_LONG).show();
-                                Navigation.findNavController(getView()).navigate(R.id.action_nav_editarFragment_to_nav_listarFragment);
+                                usuario.setId(idRecebido);
+                                AsyncTask<Void, Void, Void> execute = new AsyncTask<Void, Void, Void>() {
+                                    @Override
+                                    protected Void doInBackground(Void... voids) {
+                                        UsuarioDao usuarioDao = AppDatabase.getInstance(getActivity().getApplicationContext()).createUsuarioDAO();
+                                        usuarioDao.update(usuario);
+                                        return null;
+                                    }
+
+                                    @Override
+                                    protected void onPostExecute(Void aVoid) {
+                                        super.onPostExecute(aVoid);
+                                        String mensagem = "Registro editado com sucesso!";
+                                        Toast.makeText(getActivity().getApplicationContext(), mensagem, Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(getActivity().getApplicationContext() , MainActivity.class);
+                                        startActivity(intent);
+                                    }
+                                }.execute();
 
                             }
 
-                        }
+
 
                     }
-                }).setNegativeButton("Não", null).show();
+                ).setNegativeButton("Não", null).show();
+
+    }
+
+    public void finish() {
+        Snackbar.make(getView(), "O usuário foi editado!!!", Snackbar.LENGTH_LONG).show();
+        Navigation.findNavController(getView()).navigate(R.id.action_nav_editarFragment_to_nav_listarFragment);
 
     }
 }

@@ -1,28 +1,20 @@
 package com.example.entrega3.model;
 
-import com.google.android.material.snackbar.Snackbar;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.io.Serializable;
 
-public class Usuario {
-    static List<Usuario> usuarios = new ArrayList<>();
+@Entity
+public class Usuario implements Serializable {
+    @PrimaryKey(autoGenerate = true)
     private int id;
     private String nome;
     private String endereco;
     private  String dataNasc;
     private String genero;
 
-
     public Usuario(){}
-
-    public Usuario(int id, String nome, String endereco, String dataNasc, String genero) {
-        this.id =  id;
-        this.nome = nome;
-        this.endereco = endereco;
-        this.dataNasc = dataNasc;
-        this.genero = genero;
-    }
 
     public String getNome() {
         return nome;
@@ -64,13 +56,5 @@ public class Usuario {
         this.id = id;
     }
 
-    public static void setUsuario (Usuario usuario){
-
-        usuarios.add(usuario);
-
-    }
-    public static List<Usuario> getUsuarios(){
-        return usuarios;
-    }
-
 }
+

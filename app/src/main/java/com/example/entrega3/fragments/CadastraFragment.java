@@ -1,5 +1,7 @@
 package com.example.entrega3.fragments;
 
+import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,8 +17,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.example.entrega3.R;
+import com.example.entrega3.dao.AppDatabase;
+import com.example.entrega3.dao.UsuarioDao;
 import com.google.android.material.snackbar.Snackbar;
 
 import com.example.entrega3.model.Usuario;
@@ -29,7 +34,6 @@ public class CadastraFragment extends Fragment {
         private TextInputLayout nomeLayout, enderecoLayout, dataNascLayout;
         private Spinner genero;
         private Button btnCadastrar;
-        static int id = 0;
         @Nullable
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -47,16 +51,28 @@ public class CadastraFragment extends Fragment {
                 @Override
                 public void onClick(View view) {
                     if(validarCampos()){
-                        Snackbar.make(view, "Usuario cadastrado = "+nome.getText().toString(), Snackbar.LENGTH_LONG).show();
-                        Usuario usuarioCadastro = new Usuario();
-                        usuarioCadastro.setId(id);
-                        usuarioCadastro.setNome(nome.getText().toString());
-                        usuarioCadastro.setDataNasc(dataNasc.getText().toString());
-                        usuarioCadastro.setEndereco(endereco.getText().toString());
-                        usuarioCadastro.setGenero(genero.getSelectedItem().toString());
-                        Usuario.setUsuario(usuarioCadastro);
-                        id +=1;
-                        Navigation.findNavController(view).navigate(R.id.action_nav_cadastrar_to_nav_home);
+                        new AsyncTask<Void, Integer, Integer>() {
+                            @Override
+                            protected Integer doInBackground(Void... voids) {
+                                UsuarioDao usuarioDAO = AppDatabase.getInstance(getActivity().getApplicationContext()).createUsuarioDAO();
+                                Usuario usuario = new Usuario();
+                                usuario.setNome(nome.getText().toString());
+                                usuario.setEndereco(endereco.getText().toString());
+                                usuario.setDataNasc(dataNasc.getText().toString());
+                                usuario.setGenero(genero.getSelectedItem().toString());
+                                usuarioDAO.insert(usuario);
+                                return usuario.getId();
+                            }
+
+                            @Override
+                            protected void onPostExecute(Integer id) {
+                                if (id == null)
+                                    Toast.makeText(getActivity().getApplicationContext(), "O usuário não foi cadastrado!", Toast.LENGTH_LONG).show();
+                                else {
+                                    Toast.makeText(getActivity().getApplicationContext(), "Usuário cadastrado com sucesso.", Toast.LENGTH_LONG).show();
+                                }
+                            }
+                        }.execute();
                     }
 
                 }
@@ -88,7 +104,6 @@ public class CadastraFragment extends Fragment {
             }else{
                 dataNascLayout.setErrorEnabled(false);
             }
-
 
             return true;
         }
