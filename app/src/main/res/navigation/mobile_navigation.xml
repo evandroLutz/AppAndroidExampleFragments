@@ -46,5 +46,10 @@
         android:name="com.example.entrega3.fragments.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/nav_cadastrar_livro"
+        android:name="com.example.entrega3.fragments.Cadastrar_livroFragment"
+        android:label="Cadastrar Livro"
+        tools:layout="@layout/fragment_cadastrar_livro" />
 
 </navigation>

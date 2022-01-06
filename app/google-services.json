@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1027622741697",
+    "project_id": "book-hand",
+    "storage_bucket": "book-hand.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027622741697:android:4ab2bd49c50c26b12ad640",
+        "android_client_info": {
+          "package_name": "com.example.entrega3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027622741697-jhi1dv5mbvooa68c12b3d28nnq111o97.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.entrega3",
+            "certificate_hash": "792e42275b42548f046c5683c161ac50a4aecf45"
+          }
+        },
+        {
+          "client_id": "1027622741697-orcc6h0n6ca8j29cg1nuqmfhld5vvi58.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBH3JvTxQB5Xrw0GiBSzcGRRAQQVwCqiH8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027622741697-orcc6h0n6ca8j29cg1nuqmfhld5vvi58.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
