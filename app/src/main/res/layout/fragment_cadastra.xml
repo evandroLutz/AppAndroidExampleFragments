@@ -20,14 +20,13 @@
             android:layout_height="114dp"
             android:layout_marginStart="@dimen/linearImg"
             android:layout_marginLeft="@dimen/linearImg"
-            android:layout_marginTop="@dimen/ItemExibeTopOne"
+            android:layout_marginTop="10dp"
             app:srcCompat="@drawable/users_icon" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/nomeUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             app:boxBackgroundColor="@null"
             app:counterEnabled="true"
@@ -115,7 +114,6 @@
             android:layout_margin="@dimen/linearContent"
             android:layout_marginStart="@dimen/linearContent"
             android:layout_marginLeft="@dimen/linearContent"
-            android:layout_marginTop="@dimen/linearContent"
             android:layout_marginEnd="@dimen/linearContent"
             android:layout_marginRight="@dimen/linearContent"
             android:layout_marginBottom="@dimen/linearContent"
