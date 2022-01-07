@@ -45,7 +45,6 @@ public class Cadastrar_livroFragment extends Fragment {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Clickado com sucesso", Snackbar.LENGTH_LONG).show();
                 cadLivro(view);
             }
         });
@@ -53,8 +52,6 @@ public class Cadastrar_livroFragment extends Fragment {
     }
     public void cadLivro(View view){
         if(validarCampos()){
-        Snackbar.make(view, "Entrou cad livro", Snackbar.LENGTH_LONG).show();
-
             Livro livro = new Livro();
             livro.setTitulo(titulo.getText().toString());
             livro.setAutor(autor.getText().toString());
@@ -70,7 +67,7 @@ public class Cadastrar_livroFragment extends Fragment {
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
-                            Snackbar.make(view, "Erro ao cadastrar usuario!", Snackbar.LENGTH_LONG)
+                            Snackbar.make(view, "Erro ao cadastrar livro!", Snackbar.LENGTH_LONG)
                                     .setTextColor(Color.RED).show();
                         }
                     });

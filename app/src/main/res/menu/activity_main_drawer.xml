@@ -14,11 +14,15 @@
             android:title="@string/menu_cadastrar" />
         <item
             android:id="@+id/nav_cadastrar_livro"
-            android:icon="@drawable/associete"
+            android:icon="@drawable/book_icon"
             android:title="Cadastrar Livro" />
         <item
             android:id="@+id/nav_listar"
             android:icon="@drawable/users_icon"
             android:title="@string/menu_listar" />
+        <item
+            android:id="@+id/nav_listar_livros"
+            android:icon="@drawable/books"
+            android:title="Listar Livros" />
     </group>
 </menu>

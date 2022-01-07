@@ -8,6 +8,7 @@ import java.io.Serializable;
 @Entity
 public class Livro implements Serializable {
     @PrimaryKey(autoGenerate = true)
+    private String id;
     private String titulo;
     private String autor;
     private  String assunto;
@@ -36,6 +37,14 @@ public class Livro implements Serializable {
 
     public void setAssunto(String assunto) {
         this.assunto = assunto;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
 
