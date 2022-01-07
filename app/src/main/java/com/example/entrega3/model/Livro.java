@@ -15,6 +15,12 @@ public class Livro implements Serializable {
 
     public Livro(){}
 
+    public Livro(String titulo, String autor, String assunto) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.assunto = assunto;
+    }
+
     public String getTitulo() {
         return titulo;
     }

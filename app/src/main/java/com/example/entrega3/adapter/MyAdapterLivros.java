@@ -58,8 +58,10 @@ public class MyAdapterLivros extends RecyclerView.Adapter<MyAdapterLivros.MyView
         });
         Bundle bundle = new Bundle();
         bundle.putString("id", l.getId());
-        System.out.println("position view"+ position);
-        myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editar, bundle));
+        bundle.putString("titulo", l.getTitulo());
+        bundle.putString("autor", l.getAutor());
+        bundle.putString("assunto", l.getAssunto());
+        myViewHolder.btnEdit.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.nav_editar_livro, bundle));
     }
 
     @Override

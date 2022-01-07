@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -61,7 +62,7 @@ public class Cadastrar_livroFragment extends Fragment {
                 @Override
                 public void onSuccess(Void aVoid) {
                     Snackbar.make(view, "Cadastrado com sucesso", Snackbar.LENGTH_LONG).show();
-                    //Navigation.findNavController(view).navigate(R.id.ac);
+                    Navigation.findNavController(view).navigate(R.id.action_nav_cadastrar_livro_to_nav_listar_livros);
                 }
             })
                     .addOnFailureListener(new OnFailureListener() {

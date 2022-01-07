@@ -29,8 +29,8 @@
         android:label="@string/menu_cadastrar"
         tools:layout="@layout/fragment_cadastra" >
         <action
-            android:id="@+id/action_nav_cadastrar_to_nav_home"
-            app:destination="@id/nav_home" />
+            android:id="@+id/action_nav_cadastrar_to_nav_listar"
+            app:destination="@id/nav_listar" />
     </fragment>
 
     <fragment
@@ -50,11 +50,24 @@
         android:id="@+id/nav_cadastrar_livro"
         android:name="com.example.entrega3.fragments.Cadastrar_livroFragment"
         android:label="Cadastrar Livro"
-        tools:layout="@layout/fragment_cadastrar_livro" />
+        tools:layout="@layout/fragment_cadastrar_livro" >
+        <action
+            android:id="@+id/action_nav_cadastrar_livro_to_nav_listar_livros"
+            app:destination="@id/nav_listar_livros" />
+    </fragment>
     <fragment
         android:id="@+id/nav_listar_livros"
         android:name="com.example.entrega3.fragments.Listar_livrosFragment"
         android:label="Listar Livros"
         tools:layout="@layout/fragment_listar_livros" />
+    <fragment
+        android:id="@+id/nav_editar_livro"
+        android:name="com.example.entrega3.fragments.Editar_livroFragment"
+        android:label="fragment_editar_livro"
+        tools:layout="@layout/fragment_editar_livro" >
+        <action
+            android:id="@+id/action_nav_editar_livro_to_nav_listar_livros"
+            app:destination="@id/nav_listar_livros" />
+    </fragment>
 
 </navigation>

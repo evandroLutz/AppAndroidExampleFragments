@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CadastraFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ming"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="114dp"
+            android:layout_marginStart="@dimen/linearImg"
+            android:layout_marginLeft="@dimen/linearImg"
+            app:srcCompat="@drawable/exemplar_icon" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titulo"
+            android:inputType="text" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAutor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Autor"
+            android:inputType="text" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextAssunto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Assunto"
+            android:inputType="text" />
+
+
+        <Button
+            android:id="@+id/btnEditarExemplar"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/linearContent"
+            android:layout_marginStart="@dimen/linearContent"
+            android:layout_marginLeft="@dimen/linearContent"
+            android:layout_marginTop="@dimen/linearContent"
+            android:layout_marginEnd="@dimen/linearContent"
+            android:layout_marginRight="@dimen/linearContent"
+            android:layout_marginBottom="@dimen/linearContent"
+            android:background="@color/laurel_green"
+            android:text="@string/btnCadExemplar"
+            android:textColor="@color/laurel_green"
+            app:backgroundTint="@color/kombu_green"
+            tools:ignore="TextContrastCheck" />
+
+    </LinearLayout>
+
+</FrameLayout>
