@@ -1,6 +1,5 @@
 package com.example.entrega3.fragments;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -11,15 +10,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.entrega3.R;
-import com.example.entrega3.adapter.MyAdapter;
 import com.example.entrega3.adapter.MyAdapterLivros;
-import com.example.entrega3.dao.AppDatabase;
-import com.example.entrega3.dao.UsuarioDao;
 import com.example.entrega3.model.Livro;
-import com.example.entrega3.model.Usuario;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,7 +34,7 @@ public class Listar_livrosFragment extends Fragment {
 
         root = inflater.inflate(R.layout.fragment_listar_livros, container, false);
         recyclerView = root.findViewById(R.id.recyclerViewLivros);
-        carregaPedidos();
+        carregaLivros();
 
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
 
@@ -48,7 +42,7 @@ public class Listar_livrosFragment extends Fragment {
 
         return root;
     }
-    private void carregaPedidos(){
+    private void carregaLivros(){
         final DatabaseReference reference = FirebaseDatabase.getInstance().getReference("livro");
         livros = new ArrayList<>();
 

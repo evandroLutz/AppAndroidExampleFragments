@@ -8,7 +8,6 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.widget.AppCompatEditText;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -16,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -25,15 +23,12 @@ import com.example.entrega3.activities.MainActivity;
 import com.example.entrega3.dao.AppDatabase;
 import com.example.entrega3.dao.UsuarioDao;
 import com.example.entrega3.model.Usuario;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.List;
 
 public class EditarFragment extends Fragment {
     private TextInputEditText nome, endereco,dataNasc;
-    private TextInputLayout nomeLayout, enderecoLayout, dataNascLayout;
     private Spinner genero;
     private Button btnEditar;
     private int idRecebido;
@@ -47,9 +42,6 @@ public class EditarFragment extends Fragment {
         nome = root.findViewById(R.id.editTextnomeUsuario);
         endereco =  root.findViewById((R.id.editTextEnderecoUsuario));
         dataNasc =  root.findViewById(R.id.editTextdataNascUsuario);
-        nomeLayout = root.findViewById(R.id.nomeUsuario);
-        enderecoLayout =  root.findViewById((R.id.enderecoUsuario));
-        dataNascLayout =  root.findViewById(R.id.dataNascUsuario);
         genero = root.findViewById(R.id.spinnerGenero);
         btnEditar = root.findViewById(R.id.btnEditarUsuario);
         btnEditar.setOnClickListener(new View.OnClickListener() {
@@ -113,9 +105,4 @@ public class EditarFragment extends Fragment {
 
     }
 
-    public void finish() {
-        Snackbar.make(getView(), "O usuário foi editado!!!", Snackbar.LENGTH_LONG).show();
-        Navigation.findNavController(getView()).navigate(R.id.action_nav_editarFragment_to_nav_listarFragment);
-
-    }
 }

@@ -2,14 +2,12 @@ package com.example.entrega3.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -17,10 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.entrega3.R;
-import com.example.entrega3.dao.AppDatabase;
-import com.example.entrega3.dao.UsuarioDao;
 import com.example.entrega3.model.Livro;
-import com.example.entrega3.model.Usuario;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -77,7 +72,6 @@ public class MyAdapterLivros extends RecyclerView.Adapter<MyAdapterLivros.MyView
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         DatabaseReference reference = FirebaseDatabase.getInstance().getReference("livro");
-                        System.out.println("idString"+ listaLivros.get(position).getId());
                         reference.child(listaLivros.get(position).getId()).removeValue();
                         listaLivros.remove(position);
                         notifyItemRemoved(position);

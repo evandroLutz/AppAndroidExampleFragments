@@ -8,8 +8,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,14 +18,9 @@ import com.example.entrega3.R;
 import com.example.entrega3.model.Livro;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Editar_livroFragment extends Fragment {
     private TextInputEditText titulo;
@@ -89,7 +82,7 @@ public class Editar_livroFragment extends Fragment {
 
                             Livro l = new Livro(tituloString, autorString, assuntoString);
                             reference.setValue(l);
-                            Snackbar.make(getView(), "item editado!!!", Snackbar.LENGTH_LONG).show();
+                            Snackbar.make(getView(), "livro editado com sucesso", Snackbar.LENGTH_LONG).show();
                             Navigation.findNavController(getView()).navigate(R.id.action_nav_editar_livro_to_nav_listar_livros);
                         }
 

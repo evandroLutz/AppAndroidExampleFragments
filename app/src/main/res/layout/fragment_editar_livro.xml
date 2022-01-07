@@ -56,7 +56,7 @@
             android:layout_marginRight="@dimen/linearContent"
             android:layout_marginBottom="@dimen/linearContent"
             android:background="@color/laurel_green"
-            android:text="@string/btnCadExemplar"
+            android:text="Editar Livro"
             android:textColor="@color/laurel_green"
             app:backgroundTint="@color/kombu_green"
             tools:ignore="TextContrastCheck" />

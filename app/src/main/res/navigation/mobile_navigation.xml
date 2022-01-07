@@ -38,14 +38,12 @@
         android:name="com.example.entrega3.fragments.ListarUsuariosFragment"
         android:label="@string/menu_listar"
         tools:layout="@layout/fragment_listar_usuarios" >
+        <action
+            android:id="@+id/action_nav_listar_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.entrega3.fragments.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/nav_cadastrar_livro"
         android:name="com.example.entrega3.fragments.Cadastrar_livroFragment"
@@ -59,11 +57,15 @@
         android:id="@+id/nav_listar_livros"
         android:name="com.example.entrega3.fragments.Listar_livrosFragment"
         android:label="Listar Livros"
-        tools:layout="@layout/fragment_listar_livros" />
+        tools:layout="@layout/fragment_listar_livros" >
+        <action
+            android:id="@+id/action_nav_listar_livros_to_nav_home"
+            app:destination="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/nav_editar_livro"
         android:name="com.example.entrega3.fragments.Editar_livroFragment"
-        android:label="fragment_editar_livro"
+        android:label="Editar Livro"
         tools:layout="@layout/fragment_editar_livro" >
         <action
             android:id="@+id/action_nav_editar_livro_to_nav_listar_livros"
